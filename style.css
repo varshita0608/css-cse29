@@ -1,0 +1,21 @@
+p{
+    color:red;
+    font-size: 25px;
+    
+}
+
+.jk{
+    color:blue;
+}
+
+#jk1{
+    color:brown;
+}
+div{
+    height:200px;
+    width:200px;
+    background-color: aqua;
+    text-align: center;
+    align-content: center;
+    padding: 5px;
+}
