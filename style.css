@@ -152,14 +152,54 @@ p{
     grid-area: footer;
  } */
 
- .box{
-    height: 100px;
-    width: 100%;
-background-color: green;
+
+ body{
+    margin: 0;
+    font-family: arial,sans-serif;
+
+ }
+ nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+background: black;
+ }
+ .logo{
+    color: aliceblue;
+    font-size: 1.5rem;
+
+ }
+ .menu{
+    display: none;
+    flex-direction: column;
+    background:brown;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+ }
+ .menu a{
+    color: aliceblue;
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+ }
+ .hamburger{
+    font-size: 2rem;
+    color: aliceblue;
+    cursor: pointer;
  }
  @media(min-width:768px){
-    .box{
-        background-color: blue;
+    .menu{
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        width: auto;
+    }
+
+    .hamburger{
+        display: none;
     }
  }
- 
