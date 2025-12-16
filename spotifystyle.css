@@ -1,0 +1,127 @@
+body{
+    background-color: black;
+    color: #b3b3b3;
+    font-family: sans-serif;
+    margin: 0;
+
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "sidebar main-view" 
+    "player player";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr 90px;
+}
+.sidebar { grid-area: sidebar; }
+.main-view { grid-area: main-view; overflow-y: auto; } 
+.player-bar { grid-area: player; }
+
+.sidebar{
+    background-color: black;
+    padding: 20px;
+
+}
+.sidebar .logo{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar a{
+    color: #b3b3b3;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+
+}
+.sidebar a:hover{
+    color: white;
+}
+
+.albumheader{
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    background-image: linear-gradient(to bottom,#4f1d4f,#121212);
+}
+.albumcover{
+width: 200px;
+height: 200px;
+box-shadow: 0 4px 60px rgba(0,0,0,0.5);
+margin-right: 20px;
+}
+.details h1{
+    font-size: 4rem;
+    margin: 0;
+
+}
+.track-list{
+    padding: 20px 30px;
+}
+.track-list table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.track-list th, .track-list td{
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #282828;
+}
+.track-list td a{
+    color: #b3b3b3; 
+    text-decoration: none;
+    display: block;
+}
+.track-list td a:hover {
+    color: white;
+}
+.track-list th {
+    color: #777777;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+.track-list tbody tr:hover {
+    background-color: #282828; 
+    color: white;
+    cursor: pointer;
+}
+.spotify-embed{
+    padding: 30px;
+    background-color: #0d0d0d;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.spotify-embed h2{
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+@media (max-width: 900px) {
+    body {
+        
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "main-view"
+            "player";
+    }
+    .sidebar {
+        display: none;
+    }
+    .album-header {
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .album-art {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+    .album-info h1 {
+        font-size: 2.5rem; 
+    }
+}
